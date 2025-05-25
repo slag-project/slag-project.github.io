@@ -139,16 +139,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Language-augmented scene representations hold significant potential for robotics applications such as search and rescue, smart cities, and mining, where fast, natural language-based queries over large areas are crucial.
-            Existing methods often struggle with slow embedding speeds and limited scene sizes due to single-GPU constraints.
-            Additionally, deploying these embeddings on resource-constrained edge devices like NVIDIA Jetson remains a challenge. 
+            Language-augmented scene representations hold great promise for large-scale robotics applications such as search-and-rescue, smart cities, and mining.
+            Many of these scenarios are time-sensitive, requiring rapid scene encoding while also being data-intensive, necessitating scalable solutions.
+            Deploying these representations on robots with limited computational resources further adds to the challenge.  
           </p>
           <p>
-            To address these issues, we propose a multi-GPU framework for language-augmented Gaussian splatting, enabling faster, scalable embedding of large scenes. We build on prior methods that map 2D visual-language model embeddings to 3D scenes using SAM and CLIP.
-            Unlike approaches that rely on optimization-based embedding computation, our method simplifies the process by computing embeddings as a normalized, weighted sum of masked language features across multiple viewpoints.
-            We also integrate a vector database for efficient storage and retrieval of embeddings, with a partitioning mechanism to support deployment on mobile robots with limited resources.
-            Our experiments show an 18x speedup in embedding computation on a 16-GPU setup while achieving state-of-the-art embedding quality.
-            These results highlight the effectiveness of our method for real-world robotics applications.
+            To address this, we introduce SLAG, a multi-GPU framework for language-augmented Gaussian splatting that enhances the speed and scalability of embedding large scenes.
+            Our method integrates 2D visual-language model features into 3D scenes using SAM and CLIP.
+            Unlike prior approaches, SLAG eliminates the need for a loss function to compute per-Gaussian language embeddings.
+            Instead, it derives embeddings from 3D Gaussian scene parameters via a normalized weighted average, enabling highly parallelized scene encoding.
+            Additionally, we introduce a vector database for efficient embedding storage and retrieval.
+            Our experiments show that SLAG achieves an 18× speedup in embedding computation on a 16-GPU setup compared to OpenGaussian, while preserving embedding quality on the ScanNet and LERF datasets.
           </p>
         </div>
       </div>
