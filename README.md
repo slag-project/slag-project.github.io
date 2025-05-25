@@ -1,11 +1,11 @@
-# SLAG: Scaling Language Augmented Gaussian Splatting
+# SLAG: Scaling Language-Augmented Gaussian Splatting
 
 This is the repository that contains source code for the [SLAG project website](https://slag-project.github.io/).
 
 If you find SLAG useful for your work please cite:
 ```
 @article{szilagyi2024slag,
-  title={SLAG: Scaling Language Augmented Gaussian Splatting},
+  title={SLAG: Scaling Language-Augmented Gaussian Splatting},
   author={Laszlo Szilagyi, Francis Engelmann and Jeannette Bohg},
   booktitle={},
   year={},
